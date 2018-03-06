@@ -1,3 +1,8 @@
+/* Hecho Por:
+// Christopher Jaquez Prado - A01186997
+// Luis Raúl Arzola López - A01186956
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

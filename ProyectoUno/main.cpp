@@ -6,6 +6,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "matrix.h"
+#include "median.h"
 
 using namespace std;
 
@@ -123,6 +125,46 @@ int main()
 {
 	while (true)
 	{
-		ParseMatrixInput();
+		ParseMedianInput();
 	}
+}
+
+bool ParseMedianInput() {
+	/*
+	2
+	5
+	1
+	4
+	7
+	8
+	10
+	2
+	9
+	11
+	14
+	15
+	*/
+
+	int arraySize;
+
+	cin >> arraySize;
+
+	if (arraySize <= 0) return false;
+
+	vector<int> leftArray(arraySize), rightArray(arraySize);
+
+	for (int i = 0; i < arraySize; i++) {
+		cin >> leftArray[i];
+	}
+
+	for (int i = 0; i < arraySize; i++) {
+		cin >> rightArray[i];
+	}
+
+	FindMedian(leftArray, rightArray, 0, arraySize, 0, arraySize);
+	return true;
+}
+
+void FindMedian(vector<int> leftArray, vector<int> rightArray, int leftBottom, int leftTop, int rightBottom, int rightTop) {
+	
 }

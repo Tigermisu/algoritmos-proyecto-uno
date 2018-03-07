@@ -1,5 +1,10 @@
 #pragma once
+#include <vector>
 
-bool ParseMedianInput();
+int gMedianCaseNumber;
 
-void FindMedian(vector<int> leftArray, vector<int> rightArray, int leftBottom, int leftTop, int rightBottom, int rightTop);
+void ParseMedianInput();
+
+void FindMedian(std::vector<int> &leftArray, std::vector<int> &rightArray, int leftBottom, int leftTop, int rightBottom, int rightTop, int arraySize);
+
+void PrintMedian(int leftInteger, int rightInteger);
